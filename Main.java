@@ -140,14 +140,11 @@ public class Main {
                         }
                         SavingsAccount savings = (SavingsAccount) account;
                         double interest = savings.calculateInterest();
+                        double projectedBalance = savings.checkBalance() + interest;
 
-                        System.out.println("Account ID: " + savings.getAccId());
                         System.out.println("Interest rate: " + (savings.getInterestRate() * 100) + "%");
-                        System.out.println("Interest amount: $" + String.format("%.2f", interest));
-
-                        savings.applyInterest();
-                        transactions.add(new Transaction("Interest Applied", interest, savings.getAccId()));
-                        System.out.println("New balance: $" + String.format("%.2f", savings.checkBalance()));
+                        System.out.println("Interest earned on current balance: $" + String.format("%.2f", interest));
+                        System.out.println("Projected balance after interest: $" + String.format("%.2f", projectedBalance));
                         break;
                     }
                     case "9":

@@ -12,9 +12,6 @@ public class CheckingAccount extends Account {
         return "Checking";
     }
 
-    public double getWithdrawLimit() {
-        return withdrawLimit;
-    }
 @Override
 public void withdraw(double amount) throws InsufficientFundsException {
     checkWithdrawLimit(amount);

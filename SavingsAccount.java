@@ -34,10 +34,6 @@ public void applyInterest() {
     increaseBalance(calculateInterest());
 }
 
-public double getMinimumBalance() {
-    return minimumBalance;
-}
-
 public double getInterestRate() {
     return interestRate;
 }

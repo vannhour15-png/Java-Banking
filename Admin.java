@@ -47,6 +47,15 @@ public class Admin {
         System.out.print("Enter the new customer's full name: ");
         String fullName = sc.nextLine().trim();
 
+        System.out.print("Enter the new customer's phone number: ");
+        String phoneNumber = sc.nextLine().trim();
+
+        System.out.print("Enter the new customer's email: ");
+        String email = sc.nextLine().trim();
+
+        System.out.print("Enter the new customer's date of birth: ");
+        String dob = sc.nextLine().trim();
+        
         System.out.print("Account type (1 = Savings, 2 = Checking): ");
         String typeChoice = sc.nextLine().trim();
 
@@ -54,7 +63,7 @@ public class Admin {
         String pin = sc.nextLine().trim();
 
         String newUserId = "U" + String.format("%03d", users.size() + 1);
-        User newUser = new User(newUserId, fullName, "N/A", "N/A", "N/A", pin);
+        User newUser = new User(newUserId, fullName, phoneNumber, email, dob, pin);
 
         String newAccId = "A" + String.format("%03d", countAllAccounts(users) + 1);
         Account newAccount;
